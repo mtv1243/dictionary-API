@@ -2,9 +2,27 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  text-align: center;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#word-input {
+  margin-bottom: 20px;
+}
+
+#search-btn {
+  border-radius: 5px;
+}
+
 .part-of-speech {
   display: block;
   padding-top: 50px;
+  text-decoration: underline;
 }
 
 .shortdef {
