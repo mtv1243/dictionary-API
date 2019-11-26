@@ -9,17 +9,23 @@
 </head>
 <body>
   <div id="dictionaryApp">
-    <header>
-      <h2 class="app-title">Merriam Webster Dictionay</h2>
-      <input type="text" id="word-input" value="definition"><br>
-      <input type="button" id="search-btn" value="Search">
-    </header>
-  <main>
-    <h1 id="word">definition</h1>
-    <div class="word-meta">
+    <div class="credits">
+      <span class="credits-content">code by <a href="https://www.mylesaustin.com/photography" target="_blank">myles austin</a> for general assembly javascript development courseg © 2019</span>
     </div>
+    <div class="header-wrapper">
+    <header>
+      <div class="logo-container"><span id="logo"></span><h2 class="app-title">Dictionary</h2>
+      </div>
+      <div class="search-container"><input type="text" id="word-input" value="definition">
+      <input type="button" id="search-btn" value="Define">
+      </div>
+    </header>
+    </div>
+  <main>
+    <span class="pre-word">Define:</span> <span id="word">definition</span>
     <div id="definitions"></div>
   </div>
+  <footer></footer>
   </main>
 
   <script src="app.js" type="text/javascript"></script>

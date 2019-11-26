@@ -1,14 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,900&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: padding: 0;
+}
+
+.credits {
+  background-color: #874245;
+  color: #999;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.credits > .credits-content > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.credits > .credits-content > a:hover {
+  color: #305f7a;
+}
+
+.header-wrapper {
+ background-color: #305f7a;
+ width: 100%;
 }
 
 header {
-  text-align: center;
+ margin: auto;
+ width: 70%;
+ color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#logo {
+  background-image: url('https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png');
+  display: inline-block;
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  padding-right: 15px;
+  background-repeat: no-repeat;
+}
+
+.app-title {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+#search-btn {
+  margin-left: 15px;
 }
 
 main {
   width: 70%;
   margin: 0 auto;
+}
+
+#word, .pre-word {
+  display: inline-block;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 2rem;
+
+}
+
+#word {
+  font-weight: 700;
+  padding-left: 7px;
 }
 
 #word-input {
@@ -19,12 +92,32 @@ main {
   border-radius: 5px;
 }
 
+.lone-definition {
+  padding-top: 25px;
+  margin: 0;
+}
+
+.def-num, .syllables, .part-of-speech {
+    font-size: 1.5rem;
+}
+
+.def-num {
+  display: inline-block;
+  margin: 0;
+  padding-right: 15px;
+}
+
+.syllables {
+  font-style: italic;
+  padding-left: 20px;
+}
+
 .part-of-speech {
-  display: block;
-  padding-top: 50px;
-  text-decoration: underline;
+  font-weight: 700;
 }
 
 .shortdef {
-
+  font-weight: 300;
+  margin: 0;
+  padding-left: 30px;
 }

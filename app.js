@@ -32,33 +32,51 @@ function fetchWordDef(){
 
     }).then((res)=>{
     //get number of definitions
+      console.log(res);
     let numOfDefs = res.length;
+    let defNum = 0;
     for (let i=0; i<numOfDefs; i++){
       let defI = res[i];
       let defText; //= defI.def[0].sseq[0][0][1].dt[0][1];
-
+      let syllables = defI.hwi.hw;
       let partOfSpeech = defI.fl;
+      defNum++;
+      // console.log('defNum is ' + defNum);
+      let loneDefinitionEl = document.createElement('div');
+      loneDefinitionEl.classList.add('lone-definition');
+      definitionsEl.append(loneDefinitionEl);
+
+      let defNumEl = document.createElement('h3');
+      defNumEl.classList.add('def-num');
+      defNumEl.innerHTML = defNum + ')';
+      loneDefinitionEl.append(defNumEl);
 
       let partOfSpeechEl = document.createElement('span');
-      partOfSpeechEl.classList.add('part-of-speech')
+      partOfSpeechEl.classList.add('part-of-speech');
       partOfSpeechEl.innerHTML = partOfSpeech;
-      definitionsEl.append(partOfSpeechEl);
-      console.log('the word is ' + word);
+      loneDefinitionEl.append(partOfSpeechEl);
+
+      let syllablesEl = document.createElement('span');
+      syllablesEl.classList.add('syllables');
+      syllablesEl.innerHTML = syllables;
+      loneDefinitionEl.append(syllablesEl);
 
       for(let j=0; j<defI.shortdef.length; j++){
         let defTextEl = document.createElement('p');
         defTextEl.classList.add('shortdef');
         defText = defI.shortdef[j];
         defTextEl.innerHTML = defText;
-        definitionsEl.append(defTextEl);
-        console.log('definition is ' + defText);
+        loneDefinitionEl.append(defTextEl);
+        // console.log('definition is ' + defText);
       }
 
     }
-  console.log(res);
+
 
     })
 };
 
 fetchWordDef();
 // console.log(response);
+//this is my good luck semicolon. dont touch.
+//;
